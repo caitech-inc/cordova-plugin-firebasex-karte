@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-firebasex-karte"
+        version="1.0.0">
+
+    <name>FirebaseKartePlugin</name>
+    <description>Custom FirebasePluginMessageReceiver can be used.</description>
+    <license>MIT</license>
+
+    <platform name="android">
+        <!-- <source-file src="src/android/CustomFCMReceiverPlugin.java" target-dir="src/cordova/plugin/customfcmreceiver" />
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CustomFCMReceiverPlugin" >
+                <param name="android-package" value="cordova.plugin.customfcmreceiver.CustomFCMReceiverPlugin"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file> -->
+    </platform>
+
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="FirebaseKartePlugin">
+                <param name="ios-package" value="FirebaseKartePlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/MyFirebasePluginMessageReceiver.h" />
+        <source-file src="src/ios/MyFirebasePluginMessageReceiver.m" />
+    </platform>
+</plugin>
